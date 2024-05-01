@@ -1,0 +1,39 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ada3a3;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 2px;
+  padding: 1px 10px 1px 10px;
+}
+
+.item:hover {
+  box-shadow: inset 0 0 0 100px rgba(190, 184, 184, 0.15);
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  max-height: auto;
+  border: 1px solid #040e3a;
+  border-radius: 3px;
+  font-size: 14px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.box:hover {
+  box-shadow: inset 0 0 0 100px rgba(109, 101, 101, 0.15);
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  transition: opacity 0.2s;
+  font-weight: 500;
+}
+.link:hover {
+  opacity: 0.8;
+}

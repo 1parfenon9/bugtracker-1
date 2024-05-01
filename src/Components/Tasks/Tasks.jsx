@@ -1,0 +1,31 @@
+import React, { useEffect, useState } from 'react';
+import style from './Tasks.module.css';
+import axios from 'axios';
+import Task from '../Task/Task';
+
+const Tasks = () => {
+  // let tasks = [
+  //   { id: 1, name: 'id-2', title: 'Название', tag: 'Нефтяник', status: 'В работе', priority: 'Выосикй' }
+  // ];
+
+  const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('https://66326961c51e14d6956460bd.mockapi.io/tasks')
+      .then((res) => {
+        setTasks(res.data);
+      });
+  }, []);
+
+  return (
+    <div className={style.item}>
+      <h1>Список</h1>
+      {tasks.map((task) => (
+        <Task key={task.id} {...task} />
+      ))}
+    </div>
+  );
+};
+
+export default Tasks;
