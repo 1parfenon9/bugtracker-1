@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className={style.item}>
-      <div>
-        <Link to="/">
+    <div >
+      <div className={style.footer}>
+        {/* <Link to="/">
           <p className={style.link}>BugTracker</p>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

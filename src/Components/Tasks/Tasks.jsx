@@ -7,8 +7,8 @@ const Tasks = () => {
   // let tasks = [
   //   { id: 1, name: 'id-2', title: 'Название', tag: 'Нефтяник', status: 'В работе', priority: 'Выосикй' }
   // ];
-
   const [tasks, setTasks] = useState([]);
+  const [taskCount, setTaskCount] = useState(0);
 
   useEffect(() => {
     axios
@@ -18,9 +18,20 @@ const Tasks = () => {
       });
   }, []);
 
+  useEffect(() => {
+    setTaskCount(tasks.length);
+  }, [tasks]);
+
+  const getNounEnding = () => {
+    return count > 1 ? 'задач' : 'задача';
+  };
+  const count = tasks.length;
+  const heading = count + ' ' + getNounEnding();
+
   return (
     <div className={style.item}>
-      <h1>Список</h1>
+      <h1>Список ({taskCount})</h1>
+      <p>{heading}</p>
       {tasks.map((task) => (
         <Task key={task.id} {...task} />
       ))}

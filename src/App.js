@@ -17,6 +17,7 @@ function App() {
         <Route path="/signin" element={<Authorization />} />
         <Route path="/signup" element={<Registration />} />
       </Routes>
+      
     </div>
   );
 }

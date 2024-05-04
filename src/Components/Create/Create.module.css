@@ -8,6 +8,13 @@ form {
   padding: 54px 100px 70px 68px;
   margin: 0 auto 50px;
 }
+font {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 h1 {
   text-align: left;
 }
