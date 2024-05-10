@@ -6,18 +6,26 @@ import Create from './Components/Create/Create';
 import Authorization from './Components/Autorization/Autorization';
 import Registration from './Components/Registration/Registration';
 import Tasks from './Components/Tasks/Tasks';
+import { useState } from 'react';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div className="App">
-      <Header />
+      <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>
-        <Route path="/" element={<Tasks />} />
+        <Route path="/" element={<Authorization />} />
+        <Route path="/main" element={<Tasks />} />
         <Route path="/create" element={<Create />} />
-        <Route path="/signin" element={<Authorization />} />
-        <Route path="/signup" element={<Registration />} />
+        <Route
+          path="/login"
+          element={<Authorization setIsLoggedIn={setIsLoggedIn} />}
+        />
+        <Route
+          path="/registration"
+          element={<Registration setIsLoggedIn={setIsLoggedIn} />}
+        />
       </Routes>
-      
     </div>
   );
 }

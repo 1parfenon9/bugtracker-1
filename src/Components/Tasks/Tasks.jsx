@@ -28,15 +28,17 @@ const Tasks = () => {
   const count = tasks.length;
   const heading = count + ' ' + getNounEnding();
 
-  return (
-    <div className={style.item}>
-      <h1>Список ({taskCount})</h1>
-      <p>{heading}</p>
-      {tasks.map((task) => (
-        <Task key={task.id} {...task} />
-      ))}
-    </div>
-  );
+  if (tasks.length > 0)
+    return (
+      <div className={style.item}>
+        <h1>Список ({taskCount})</h1>
+        <p>{heading}</p>
+        {tasks.map((task) => (
+          <Task key={task.id} {...task} />
+        ))}
+      </div>
+    );
+  else return <h3>Ничего нет</h3>;
 };
 
 export default Tasks;

@@ -1,15 +1,14 @@
-.footer {
+footer {
+  height: 80px;
+  background-color: #393939;
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 10px;
-  background-color: black;
-  height: 90px;
 }
 
-.link {
-  color: #fff;
-  display: flex;
-  margin-left: 15%;
-  margin-top: 30px;
-  font-weight: 500;
+footer span {
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
 }
