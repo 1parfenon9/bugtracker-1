@@ -4,7 +4,7 @@ const CheckBoxPriority = ({ priority }) => {
   return (
     <div>
       <label>{priority}</label>
-      <input type="checkbox" />
+      <input type="radio" />
     </div>
   );
 };

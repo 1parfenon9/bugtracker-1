@@ -3,6 +3,15 @@
   flex-wrap: wrap;
 }
 
-p{
+p {
   text-align: left;
+}
+
+.input {
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  display: table;
+  width: 370px;
 }

@@ -14,10 +14,6 @@ function App() {
     <div className="App">
       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>
-        <Route
-          path="/"
-          element={<Authorization setIsLoggedIn={setIsLoggedIn}/>}
-        />
         <Route path="/main" element={<Tasks />} />
         <Route path="/create" element={<Create />} />
         <Route
@@ -29,6 +25,7 @@ function App() {
           element={<Registration setIsLoggedIn={setIsLoggedIn} />}
         />
       </Routes>
+      <Footer />
     </div>
   );
 }

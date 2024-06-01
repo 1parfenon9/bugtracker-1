@@ -11,12 +11,12 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
       {isLoggedIn ? (
         <nav className={style.nav}>
           <div className={style.link}>
-            <Link exact to="/main">
+            <Link to="/main">
               Главная
             </Link>
           </div>
           <div>
-            <Link exact to="/create">
+            <Link to="/create">
               Создать задачу
             </Link>
           </div>

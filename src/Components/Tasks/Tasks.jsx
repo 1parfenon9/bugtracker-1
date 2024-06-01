@@ -26,12 +26,18 @@ const Tasks = () => {
     return count > 1 ? 'задач' : 'задача';
   };
   const count = tasks.length;
-  const heading = count + ' ' + getNounEnding();
+  const heading = 'Найдено: ' + count + ' ' + getNounEnding();
 
   if (tasks.length > 0)
     return (
       <div className={style.item}>
         <h1>Список ({taskCount})</h1>
+        <input
+          className={style.input}
+          type="text"
+          id="search"
+          placeholder="Введите название"
+        />
         <p>{heading}</p>
         {tasks.map((task) => (
           <Task key={task.id} {...task} />

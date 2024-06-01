@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import style from './Autorization.module.css';
 
-const Authorization = (setIsLoggedIn) => {
+const Authorization = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -20,6 +20,7 @@ const Authorization = (setIsLoggedIn) => {
       alert('Неверный логин или пароль!');
     }
   };
+
   return (
     <div>
       <h1>Войти на сайт</h1>
@@ -58,12 +59,7 @@ const Authorization = (setIsLoggedIn) => {
             />
           </label>
         </div>
-
-        <button
-          type="submit"
-          className={style.button}
-          // onClick={() => setIsLoggedIn(true)}
-        >
+        <button type="submit" className={style.button}>
           Войти
         </button>
       </form>
